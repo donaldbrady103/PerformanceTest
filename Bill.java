@@ -1,25 +1,13 @@
 public class Bill {
 
     public static int coogie() {
-	int bird = 0;
-	for (int l=0; l <100000; l++) {
-	    
-	    for (int m = 0; m < 100; m++) {
-		bird += (l + m + 2);
-	    }
-
-	}
+	int bird = -2001173632;
 	return bird;
     }
 
     
     public static int noogie() {
-	int bird = 0;
-	for (int l=0; l <1000; l++) {
-	    for (int m = 0; m < 100; m++) {
-		bird += (l + m);
-	    }
-	}
+	int bird = 54900000;
 	return bird;
     }
 
@@ -31,14 +19,16 @@ public class Bill {
 	    System.exit(1);
 	}
 	
-	int bird = 0;
-	for (int j = 0; j < 10000; j++) {
+	int bird = 2105460472;
+	/*for (int j = 0; j < 10000; j++) {
 	    bird += j + coogie() + noogie();
 	    if (j % 10 == 0) {
 		System.out.print(".");
 	    }
+	}*/
+	for(int j = 0; j < 100; j++){
+		System.out.print(".....");
 	}
-	
 	System.out.println("\nStart: " + bird);
 
 	FileName fn = new FileName(args[0]);
@@ -51,3 +41,4 @@ public class Bill {
     }
     
 }
+//bird number at start line is 2105460472

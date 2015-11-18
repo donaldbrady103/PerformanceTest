@@ -4,10 +4,9 @@ public class BillUtil {
 
     public static int value() {
 	int toReturn = 0;
-	for (int j = 0; j < (++offset * 111); j++) {
-	    toReturn++;
-	}
-	return toReturn % 100;
+	
+	//System.out.println("OFFSET NUMBER THING IS : " + toReturn%100);
+	return toReturn;
     }
 
     public static int superValue() {

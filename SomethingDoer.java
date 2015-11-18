@@ -6,7 +6,7 @@ public class SomethingDoer {
     FileName _fileName;
 
     public SomethingDoer(FileName f) {
-	_fileName = f;
+	//_fileName = f;
     }
     
     private ArrayList<String> getNewArrayList() {
@@ -19,13 +19,13 @@ public class SomethingDoer {
 
     private ArrayList<String> clearOutArrayList(ArrayList<String> arr) {
 	ArrayList<String> toReturn = new ArrayList<String>();
-	for (String a : arr) {
+	/*for (String a : arr) {
 	    toReturn.add(a);
 	}
 	int count = arr.size();
 	for (int j = 0; j < count; j++) {
 	    toReturn.remove(0);
-	}
+	}*/
 	return toReturn;
 	
     }
@@ -51,7 +51,6 @@ public class SomethingDoer {
 	_fileName = f;
 	
 	ArrayList<String> strings = getNewArrayList();
-
 	strings = clearOutArrayList(strings);
 
 	FileAccess fa = new FileAccess();
@@ -63,15 +62,16 @@ public class SomethingDoer {
 
 	String[] strings3 = convertToStringArray(strings2);
 	
-	int[] calculated = dc.calculate((new StrategyOne()), strings3);
+	int[] calculated = dc.calculate((new StrategyOne()), strings);
 
 	int total = 0;
 	for (int line : calculated) {
 	    total += line;
 	}
 
-	OutputControl oc = new OutputControl(System.out);
-	oc.print("" + (total % 100));
+	//OutputControl oc = new OutputControl(System.out);
+	//oc.print("" + (total % 100));
+	System.out.println("" + (total%100));
 
     }
     

@@ -14,11 +14,11 @@ public class DataCalculator {
 	return toReturn;
     }
     
-    public int[] calculate(StrategyInterface strategy, String[] strings) {
-	int size = getSize(strings);
+    public int[] calculate(StrategyInterface strategy, ArrayList<String> strings) {
+	int size = strings.size();
 	int[] toReturn = new int[size];
-	for (int j = 0; j < strings.length; j++) {
-	    int calced = strategy.calculate(strings[j]);
+	for (int j = 0; j < strings.size(); j++) {
+	    int calced = strategy.calculate(strings.get(j));
 	    toReturn[j] = calced;
 	}
 
